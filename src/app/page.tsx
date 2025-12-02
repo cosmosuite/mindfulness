@@ -36,8 +36,8 @@ export default function Home() {
     const getCheckoutUrl = () => {
         if (typeof window === 'undefined') {
             return currency === 'INR'
-                ? 'https://in-checkout.lifecoachingkit.store/mindfulness-coaching-toolkit'
-                : 'https://checkout.lifecoachingkit.store/mindfulness-coaching-toolkit';
+                ? 'https://in-checkout.mindfulnesscoachingkit.pro/checkout'
+                : 'https://checkout.mindfulnesscoachingkit.pro/checkout';
         }
 
         const urlParams = new URLSearchParams(window.location.search);
@@ -62,8 +62,8 @@ export default function Home() {
         });
 
         const baseUrl = currency === 'INR'
-            ? 'https://in-checkout.lifecoachingkit.store/mindfulness-coaching-toolkit'
-            : 'https://checkout.lifecoachingkit.store/mindfulness-coaching-toolkit';
+            ? 'https://in-checkout.mindfulnesscoachingkit.pro/checkout'
+            : 'https://checkout.mindfulnesscoachingkit.pro/checkout';
         const queryString = utmParams.toString();
 
         return queryString ? `${baseUrl}?${queryString}` : baseUrl;
@@ -723,23 +723,17 @@ export default function Home() {
                         </p>
                     </div>
 
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
-                        {testimonials.map((testimonial, index) => (
-                            <Card key={index} className="border-2 hover:shadow-lg transition-shadow">
-                                <CardContent className="p-5 md:p-8">
-                                    <div className="flex gap-0.5 md:gap-1 mb-3 md:mb-4">
-                                        {[...Array(testimonial.rating)].map((_, i) => (
-                                            <Star key={i} className="w-4 h-4 md:w-5 md:h-5 fill-primary text-primary" />
-                                        ))}
-                                    </div>
-                                    <p className="text-sm md:text-base text-muted-foreground mb-4 md:mb-6 leading-relaxed">"{testimonial.content}"</p>
-                                    <div>
-                                        <div className="font-semibold text-sm md:text-base">{testimonial.name}</div>
-                                        <div className="text-xs md:text-sm text-muted-foreground">{testimonial.role}</div>
-                                    </div>
-                                </CardContent>
-                            </Card>
-                        ))}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+                        <img
+                            src="/images/testimonials-1.png"
+                            alt="Real user reviews and results 1"
+                            className="w-full rounded-xl shadow-lg border border-border"
+                        />
+                        <img
+                            src="/images/testimonials-2.png"
+                            alt="Real user reviews and results 2"
+                            className="w-full rounded-xl shadow-lg border border-border"
+                        />
                     </div>
                 </div>
             </section>
