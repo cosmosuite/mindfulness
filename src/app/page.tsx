@@ -277,16 +277,13 @@ export default function Home() {
                         <div className="flex items-center gap-2">
                             <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white font-serif font-bold text-xl">M</div>
                             <h1 className="text-lg md:text-xl font-bold text-foreground tracking-tight">
-                                Mindfulness Coaching Toolkit
+                                Mindfulness Coaching Kit
                             </h1>
                         </div>
                         <div className="flex items-center gap-3">
                             <CurrencySwitcher />
                             <Button variant="ghost" size="sm" className="hidden md:flex text-muted-foreground hover:text-foreground" onClick={() => window.open('https://members.weddingkit.pro/login', '_self')}>
                                 Login
-                            </Button>
-                            <Button size="sm" className="rounded-full bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/20" onClick={handleCheckoutRedirect}>
-                                Get Access
                             </Button>
                         </div>
                     </div>
@@ -374,7 +371,7 @@ export default function Home() {
                         >
                             <img
                                 src="/assets/mindfulness/Hero Image_converted.webp"
-                                alt="Mindfulness Coaching Toolkit Hero"
+                                alt="Mindfulness Coaching Kit Hero"
                                 className="w-full h-auto"
                             />
                         </motion.div>
@@ -398,7 +395,7 @@ export default function Home() {
                             Inside the Toolkit
                         </Badge>
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-foreground mb-3 md:mb-4 px-2">
-                            What's Inside the Mindfulness Coaching Toolkit
+                            What's Inside the Mindfulness Coaching Kit
                         </h2>
                         <p className="text-lg md:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
                             A complete system for mindfulness coaches with workbooks, scripts, and templates
@@ -590,7 +587,7 @@ export default function Home() {
                     <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
                         {keyFeatures.map((feature, index) => (
                             <Card key={index} className="border-2 hover:border-primary/50 transition-all hover:shadow-lg overflow-hidden">
-                                <div className="grid md:grid-cols-2 gap-0">
+                                <div className="flex flex-col">
                                     <div className="relative aspect-square overflow-hidden">
                                         <img
                                             src={feature.image}
@@ -599,7 +596,7 @@ export default function Home() {
                                             loading="lazy"
                                         />
                                     </div>
-                                    <CardContent className="p-6 md:p-8 flex flex-col justify-center">
+                                    <CardContent className="p-6 md:p-8">
                                         <h3 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-3">
                                             {feature.title}
                                         </h3>
@@ -652,8 +649,8 @@ export default function Home() {
 
                                     {/* Image Column */}
                                     <motion.div
-                                        initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                                        whileInView={{ opacity: 1, x: 0 }}
+                                        initial={{ opacity: 0, y: 50 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
                                         viewport={{ once: true }}
                                         transition={{ duration: 0.8 }}
                                         className={`relative ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}
@@ -671,7 +668,7 @@ export default function Home() {
 
                                     {/* Content Column */}
                                     <motion.div
-                                        initial={{ opacity: 0, y: 30 }}
+                                        initial={{ opacity: 0, y: 50 }}
                                         whileInView={{ opacity: 1, y: 0 }}
                                         viewport={{ once: true }}
                                         transition={{ duration: 0.8, delay: 0.2 }}
@@ -981,7 +978,7 @@ export default function Home() {
                 <div className="max-w-7xl mx-auto text-center">
                     <div className="mb-5 md:mb-6">
                         <h3 className="text-xl md:text-2xl font-serif font-bold text-primary mb-1.5 md:mb-2">
-                            Mindfulness Coaching Toolkit
+                            Mindfulness Coaching Kit
                         </h3>
                         <p className="text-sm md:text-base text-muted-foreground">Empowering mindfulness coaches to transform their practice.</p>
                     </div>
@@ -995,7 +992,7 @@ export default function Home() {
                     </div>
 
                     <p className="text-sm md:text-base text-muted-foreground">
-                        © 2025 Mindfulness Coaching Toolkit. All rights reserved.
+                        © 2025 Mindfulness Coaching Kit. All rights reserved.
                     </p>
                 </div>
             </footer>
