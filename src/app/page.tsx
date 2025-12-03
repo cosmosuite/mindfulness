@@ -947,10 +947,10 @@ export default function Home() {
                                     "Mindfulness Against Limiting Beliefs (Guide version)"
                                 ].map((item, index) => (
                                     <div key={index} className="flex items-start gap-2 p-2 rounded-md hover:bg-muted/50 transition-colors">
-                                        <div className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center text-primary text-xs font-semibold mt-0.5">
+                                        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center text-primary text-sm font-semibold mt-0.5">
                                             {index + 1}
                                         </div>
-                                        <span className="text-xs md:text-sm text-foreground/80 leading-snug">{item}</span>
+                                        <span className="text-sm md:text-base text-foreground/80 leading-snug">{item}</span>
                                     </div>
                                 ))}
                             </div>
