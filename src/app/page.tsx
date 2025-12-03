@@ -137,27 +137,16 @@ export default function Home() {
             ]
         },
         {
-            title: "Mastering Mindfulness Program",
-            description: "Advanced mindfulness exercises and techniques to deepen your clients' practice.",
-            image: "/assets/mindfulness/Mastering Mindfulness_converted.webp",
+            title: "Guided Audio Meditation Scripts",
+            description: "Transformative guided meditation scripts with audio to help your clients deepen their mindfulness practice.",
+            image: "/assets/mindfulness/Category Images/Guided Audio Meditation Scripts.webp",
             items: [
-                "Mastering Mindfulness guided worksheets",
-                "Present-moment awareness exercises",
-                "Advanced meditation technique pages",
-                "Daily awareness tracker sheets",
-                "Companion workbook pages for ongoing practice"
-            ]
-        },
-        {
-            title: "Self-Compassion Meditation Scripts",
-            description: "Transformative meditation scripts to guide your clients toward self-compassion and emotional healing.",
-            image: "/assets/mindfulness/Self Compassion Meditation Scripts_converted.webp",
-            items: [
-                "Self-compassion meditation scripts",
-                "Emotional soothing and care scripts",
-                "Guided inner dialogue exercises",
-                "Printable and digital meditation formats",
-                "Bonus script layouts for coaching sessions"
+                "Body Scan Meditation",
+                "The Three-Minute Breathing Space",
+                "Self-Compassion Meditation",
+                "Mindful Walking Meditation",
+                "Mindfulness Against Limiting Beliefs",
+                "Audiobook Tracker"
             ]
         },
         {
@@ -245,22 +234,34 @@ export default function Home() {
     ];
 
     const productImages = [
-        "/assets/mindfulness/Coaching Business toolkit_converted.webp",
-        "/assets/mindfulness/Growth & Branding Tools _converted.webp",
-        "/assets/mindfulness/Mastering Mindfulness_converted.webp",
-        "/assets/mindfulness/Self Compassion Meditation Scripts_converted.webp",
-        "/assets/mindfulness/Self Practice Tools for Clients_converted.webp",
-        "/assets/mindfulness/Hero Image_converted.webp",
-        "/assets/mindfulness/What's Inside _converted.webp",
-        "/assets/mindfulness/Bonus (Guided Mindfulness Sessions)_converted.webp",
-        "/assets/mindfulness/Fully Editable in Canva_converted.webp",
-        "/assets/mindfulness/Get Instant Access_converted.webp",
-        "/assets/mindfulness/CTA Image_converted.webp"
+        "/assets/mindfulness/Scroller Images/Product_converted.webp",
+        "/assets/mindfulness/Scroller Images/Product (2)_converted.webp",
+        "/assets/mindfulness/Scroller Images/Product (3)_converted.webp",
+        "/assets/mindfulness/Scroller Images/Product (4)_converted.webp",
+        "/assets/mindfulness/Scroller Images/Product (5)_converted.webp",
+        "/assets/mindfulness/Scroller Images/Product (6)_converted.webp",
+        "/assets/mindfulness/Scroller Images/Product (7)_converted.webp",
+        "/assets/mindfulness/Scroller Images/Product (8)_converted.webp",
+        "/assets/mindfulness/Scroller Images/Product (9)_converted.webp",
+        "/assets/mindfulness/Scroller Images/Product (10)_converted.webp",
+        "/assets/mindfulness/Scroller Images/Product (11)_converted.webp",
+        "/assets/mindfulness/Scroller Images/Product (12)_converted.webp",
+        "/assets/mindfulness/Scroller Images/Product (13)_converted.webp",
+        "/assets/mindfulness/Scroller Images/Product (14)_converted.webp",
+        "/assets/mindfulness/Scroller Images/Product (15)_converted.webp",
+        "/assets/mindfulness/Scroller Images/Product (16)_converted.webp",
+        "/assets/mindfulness/Scroller Images/Product (17)_converted.webp",
+        "/assets/mindfulness/Scroller Images/Product (18)_converted.webp",
+        "/assets/mindfulness/Scroller Images/Product (19)_converted.webp",
+        "/assets/mindfulness/Scroller Images/Product (20)_converted.webp",
+        "/assets/mindfulness/Scroller Images/Product (21)_converted.webp",
+        "/assets/mindfulness/Scroller Images/Product (22)_converted.webp",
+        "/assets/mindfulness/Scroller Images/Product (23)_converted.webp"
     ];
 
     // Split images for marquee
-    const row1Images = productImages.slice(0, 6);
-    const row2Images = productImages.slice(6, 11);
+    const row1Images = productImages.slice(0, 12);
+    const row2Images = productImages.slice(12, 23);
 
     return (
         <div className="min-h-screen bg-background font-sans selection:bg-primary/20 selection:text-primary-foreground overflow-x-hidden">
@@ -568,65 +569,7 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* 5. Key Features Section */}
-            <section className="py-12 md:py-24 px-4 md:px-6 bg-muted/30">
-                <div className="max-w-7xl mx-auto">
-                    <div className="text-center mb-10 md:mb-16">
-                        <Badge variant="secondary" className="mb-3 md:mb-4 text-sm md:text-base px-3 md:px-4 py-1.5 md:py-2 bg-primary/10 text-primary border-none">
-                            <Sparkles className="w-3 h-3 md:w-4 md:h-4 mr-1.5 md:mr-2 inline" />
-                            Key Features
-                        </Badge>
-                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-foreground mb-3 md:mb-4 px-2">
-                            Easy to Use, Easy to Customize
-                        </h2>
-                        <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
-                            Everything is designed to work seamlessly with your existing workflow
-                        </p>
-                    </div>
-
-                    <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
-                        {keyFeatures.map((feature, index) => (
-                            <Card key={index} className="border-2 hover:border-primary/50 transition-all hover:shadow-lg overflow-hidden">
-                                <div className="flex flex-col">
-                                    <div className="relative aspect-square overflow-hidden">
-                                        <img
-                                            src={feature.image}
-                                            alt={feature.title}
-                                            className="w-full h-full object-cover"
-                                            loading="lazy"
-                                        />
-                                    </div>
-                                    <CardContent className="p-6 md:p-8">
-                                        <h3 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-3">
-                                            {feature.title}
-                                        </h3>
-                                        <p className="text-base text-muted-foreground mb-6">
-                                            {feature.description}
-                                        </p>
-                                        <ul className="space-y-2">
-                                            {feature.items.map((item, i) => (
-                                                <li key={i} className="flex items-start gap-2">
-                                                    <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                                                    <span className="text-sm md:text-base text-foreground/80">{item}</span>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </CardContent>
-                                </div>
-                            </Card>
-                        ))}
-                    </div>
-
-                    <div className="text-center mt-10 md:mt-16">
-                        <Button size="lg" className="text-lg md:text-xl px-6 md:px-8 py-5 md:py-6 bg-primary hover:bg-primary/90 text-white rounded-full shadow-lg hover:shadow-xl transition-all" onClick={handleCheckoutRedirect}>
-                            <Download className="w-4 h-4 md:w-5 md:h-5 mr-2" />
-                            Get Instant Access
-                        </Button>
-                    </div>
-                </div>
-            </section>
-
-            {/* 6. Detailed Product Showcase (Alternating Rows) */}
+            {/* 5. Detailed Product Showcase (Alternating Rows) */}
             <section className="py-12 md:py-24 px-4 md:px-6 bg-card">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-10 md:mb-16">
@@ -708,7 +651,7 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* 7. Testimonials */}
+            {/* 9. Testimonials */}
             <section className="py-12 md:py-24 px-4 md:px-6 bg-muted/30">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-10 md:mb-16">
@@ -735,91 +678,53 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* 8. Bonuses Section */}
-            <section className="py-12 md:py-24 px-4 md:px-6 bg-gradient-to-b from-background to-primary/5">
+            {/* 7. Key Features Section */}
+            <section className="py-12 md:py-24 px-4 md:px-6 bg-muted/30">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-10 md:mb-16">
                         <Badge variant="secondary" className="mb-3 md:mb-4 text-sm md:text-base px-3 md:px-4 py-1.5 md:py-2 bg-primary/10 text-primary border-none">
-                            <Gift className="w-3 h-3 md:w-4 md:h-4 mr-1.5 md:mr-2 inline" />
-                            Exclusive Bonuses
+                            <Sparkles className="w-3 h-3 md:w-4 md:h-4 mr-1.5 md:mr-2 inline" />
+                            Key Features
                         </Badge>
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-foreground mb-3 md:mb-4 px-2">
-                            Get Started Right Away
+                            Easy to Use, Easy to Customize
                         </h2>
                         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
-                            Everything you need to succeed included free - no guesswork, no confusion, just results
+                            Everything is designed to work seamlessly with your existing workflow
                         </p>
                     </div>
 
-                    <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
-                        <div className="order-2 lg:order-1">
-                            <div className="space-y-6 md:space-y-8">
-                                <Card className="border-2 hover:border-primary/50 transition-all hover:shadow-lg group">
-                                    <CardContent className="p-5 md:p-6">
-                                        <div className="flex items-start gap-4">
-                                            <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                                                <PlayCircle className="w-6 h-6 md:w-7 md:h-7 text-primary" />
+                    <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
+                        {keyFeatures.map((feature, index) => (
+                            <Card key={index} className="border-2 hover:border-primary/50 transition-all hover:shadow-lg overflow-hidden">
+                                <div className="flex flex-col">
+                                    <div className="relative aspect-square overflow-hidden">
+                                        <img
+                                            src={feature.image}
+                                            alt={feature.title}
+                                            className="w-full h-full object-cover"
+                                            loading="lazy"
+                                        />
                                             </div>
-                                            <div>
-                                                <h3 className="text-xl md:text-2xl font-serif font-bold mb-1">
-                                                    CANVA TUTORIALS
+                                    <CardContent className="p-6 md:p-8">
+                                        <h3 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-3">
+                                            {feature.title}
                                                 </h3>
-                                                <p className="text-base md:text-base text-muted-foreground">
-                                                    Step-by-step guides to help you customize your templates quickly
-                                                </p>
-                                            </div>
-                                        </div>
+                                        <p className="text-base text-muted-foreground mb-6">
+                                            {feature.description}
+                                        </p>
+                                        <ul className="space-y-2">
+                                            {feature.items.map((item, i) => (
+                                                <li key={i} className="flex items-start gap-2">
+                                                    <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                                                    <span className="text-sm md:text-base text-foreground/80">{item}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
                                     </CardContent>
+                                            </div>
                                 </Card>
-
-                                <Card className="border-2 hover:border-primary/50 transition-all hover:shadow-lg group">
-                                    <CardContent className="p-5 md:p-6">
-                                        <div className="flex items-start gap-4">
-                                            <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                                                <FileText className="w-6 h-6 md:w-7 md:h-7 text-primary" />
-                                            </div>
-                                            <div>
-                                                <h3 className="text-xl md:text-2xl font-serif font-bold mb-1">
-                                                    FULL SETUP INSTRUCTIONS
-                                                </h3>
-                                                <p className="text-base md:text-base text-muted-foreground">
-                                                    Complete guide for using all the business forms and contracts
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </CardContent>
-                                </Card>
-
-                                <Card className="border-2 hover:border-primary/50 transition-all hover:shadow-lg group">
-                                    <CardContent className="p-5 md:p-6">
-                                        <div className="flex items-start gap-4">
-                                            <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                                                <Sparkles className="w-6 h-6 md:w-7 md:h-7 text-primary" />
-                                            </div>
-                                            <div>
-                                                <h3 className="text-xl md:text-2xl font-serif font-bold mb-1">
-                                                    LIFETIME ACCESS & UPDATES
-                                                </h3>
-                                                <p className="text-base md:text-base text-muted-foreground">
-                                                    Access to all future updates and new templates added to the toolkit
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </CardContent>
-                                </Card>
-                            </div>
-                        </div>
-
-                        <div className="relative order-1 lg:order-2">
-                            <div className="rounded-xl md:rounded-2xl overflow-hidden shadow-2xl border-2 md:border-4 border-white">
-                                <img
-                                    src="/assets/mindfulness/Bonus (Guided Mindfulness Sessions)_converted.webp"
-                                    alt="Bonus Content - Guided Mindfulness Sessions"
-                                    className="w-full h-auto aspect-square object-cover"
-                                    loading="lazy"
-                                />
-                            </div>
-                        </div>
+                        ))}
                     </div>
 
                     <div className="text-center mt-10 md:mt-16">
@@ -831,7 +736,96 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* 9. How It Works */}
+            {/* 9. Bonus Section */}
+            <section className="py-12 md:py-24 px-4 md:px-6 bg-gradient-to-b from-background to-primary/5">
+                <div className="max-w-7xl mx-auto">
+                    <div className="text-center mb-10 md:mb-16">
+                        <Badge variant="secondary" className="mb-3 md:mb-4 text-sm md:text-base px-3 md:px-4 py-1.5 md:py-2 bg-primary/10 text-primary border-none">
+                            <Gift className="w-3 h-3 md:w-4 md:h-4 mr-1.5 md:mr-2 inline" />
+                            Exclusive Bonus
+                        </Badge>
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-foreground mb-3 md:mb-4 px-2">
+                            Oh! I Completely Forgot
+                        </h2>
+                        <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
+                            You also get this amazing Mindfulness Audiobook Tracker bonus
+                        </p>
+                    </div>
+
+                    <div className="grid lg:grid-cols-2 gap-12 md:gap-20 items-center">
+                        {/* Image Column */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
+                            className="relative"
+                        >
+                            <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-white">
+                                <img
+                                    src="/assets/mindfulness/Category Images/Bonus_converted.webp"
+                                    alt="Mindfulness Audiobook Tracker Bonus"
+                                    className="w-full h-auto aspect-square object-cover transform hover:scale-105 transition-transform duration-700"
+                                    loading="lazy"
+                                />
+                            </div>
+                            {/* Decorative background blob */}
+                            <div className="absolute -z-10 top-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-primary/5 rounded-full blur-3xl -left-10" />
+                        </motion.div>
+
+                        {/* Content Column */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
+                        >
+                            <div className="flex items-center gap-3 mb-4">
+                                <div className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+                                    <Gift className="w-5 h-5" />
+                                </div>
+                                <h3 className="text-2xl md:text-3xl font-serif font-bold text-foreground">Mindfulness Audiobook Tracker</h3>
+                            </div>
+
+                            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+                                Track your mindfulness audiobook journey with this comprehensive tracker. Monitor your progress, note your mood, and stay consistent with your practice.
+                            </p>
+
+                            <div className="space-y-4">
+                                <div className="flex items-start gap-3 p-3 rounded-lg hover:bg-muted/50 transition-colors">
+                                    <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                                    <span className="text-base text-foreground/80">Track multiple audiobooks with detailed progress monitoring</span>
+                                </div>
+                                <div className="flex items-start gap-3 p-3 rounded-lg hover:bg-muted/50 transition-colors">
+                                    <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                                    <span className="text-base text-foreground/80">Record listening duration and track your daily practice time</span>
+                                </div>
+                                <div className="flex items-start gap-3 p-3 rounded-lg hover:bg-muted/50 transition-colors">
+                                    <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                                    <span className="text-base text-foreground/80">Note your mood and reflections after each session</span>
+                                </div>
+                                <div className="flex items-start gap-3 p-3 rounded-lg hover:bg-muted/50 transition-colors">
+                                    <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                                    <span className="text-base text-foreground/80">Visual progress tracking with audio player interface</span>
+                                </div>
+                                <div className="flex items-start gap-3 p-3 rounded-lg hover:bg-muted/50 transition-colors">
+                                    <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                                    <span className="text-base text-foreground/80">Perfect for coaches to track client audiobook assignments</span>
+                                </div>
+                            </div>
+
+                            <div className="mt-8">
+                                <Button size="lg" className="text-lg md:text-xl px-6 md:px-8 py-5 md:py-6 bg-primary hover:bg-primary/90 text-white rounded-full shadow-lg hover:shadow-xl transition-all" onClick={handleCheckoutRedirect}>
+                                    <Download className="w-4 h-4 md:w-5 md:h-5 mr-2" />
+                                    Get Instant Access
+                                </Button>
+                            </div>
+                        </motion.div>
+                    </div>
+                </div>
+            </section>
+
+            {/* 10. How It Works */}
             <section className="py-12 md:py-24 px-4 md:px-6 bg-background">
                 <div className="max-w-5xl mx-auto">
                     <div className="text-center mb-10 md:mb-16">
@@ -876,7 +870,7 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* 10. Final CTA (Pricing) */}
+            {/* 11. Final CTA (Pricing) */}
             <section className="py-12 md:py-24 px-4 md:px-6 bg-gradient-to-br from-primary/20 via-background to-secondary/20 relative overflow-hidden">
                 <div className="max-w-4xl mx-auto text-center relative z-10">
                     <h2 className="text-3xl sm:text-4xl md:text-6xl font-serif font-bold mb-4 md:mb-6 px-2">
@@ -930,7 +924,7 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* 11. FAQ Section */}
+            {/* 12. FAQ Section */}
             <section className="py-12 md:py-24 px-4 md:px-6 bg-card">
                 <div className="max-w-4xl mx-auto">
                     <div className="text-center mb-10 md:mb-16">
@@ -973,7 +967,7 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* 12. Footer */}
+            {/* 13. Footer */}
             <footer className="py-8 md:py-12 px-4 md:px-6 bg-card border-t">
                 <div className="max-w-7xl mx-auto text-center">
                     <div className="mb-5 md:mb-6">
