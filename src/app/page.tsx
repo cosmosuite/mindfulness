@@ -75,6 +75,14 @@ export default function Home() {
         window.open(checkoutUrl, '_self');
     };
 
+    // Function to scroll to What's Inside section
+    const handleScrollToWhatsInside = () => {
+        const element = document.getElementById('whats-inside');
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    };
+
     const features = [
         {
             icon: FileText,
@@ -312,11 +320,10 @@ export default function Home() {
                         </div>
 
 
-                        <h1 className="text-2xl sm:text-4xl md:text-5xl font-serif font-bold text-foreground mb-4 md:mb-6 leading-tight px-2 max-w-5xl mx-auto">
-                            Transform Your <span className="text-primary">Mindfulness Coaching</span> Practice <br className="md:hidden" />
-                            <span className="bg-primary/10 text-primary px-2 py-1 rounded inline-block transform -rotate-1">With Complete Coaching Tools</span> <br className="md:hidden" />
-                            And Empower Your Clients With <br className="md:hidden" />
-                            <span className="bg-primary/10 text-primary px-2 py-1 rounded inline-block transform -rotate-1">Professional Mindfulness Resources</span>
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-foreground mb-4 md:mb-6 leading-normal px-2 max-w-5xl mx-auto">
+                            Transform Your <span className="bg-primary/10 text-primary px-2 py-1 rounded inline transform -rotate-1">Mindfulness Coaching</span> Practice{' '}
+                            And Empower Your Clients With{' '}
+                            <span className="bg-primary/10 text-primary px-2 py-1 rounded inline transform -rotate-1">Professional Mindfulness Resources</span>
                         </h1>
 
                         <p className="text-lg sm:text-lg md:text-2xl text-muted-foreground mb-6 md:mb-8 max-w-3xl mx-auto leading-relaxed px-2">
@@ -350,7 +357,7 @@ export default function Home() {
                                 <Download className="w-4 h-4 md:w-5 md:h-5 mr-2" />
                                 Get Instant Access
                             </Button>
-                            <Button size="lg" variant="outline" className="w-full sm:w-auto text-lg md:text-xl px-6 md:px-8 py-5 md:py-6 border-2 rounded-full" onClick={handleCheckoutRedirect}>
+                            <Button size="lg" variant="outline" className="w-full sm:w-auto text-lg md:text-xl px-6 md:px-8 py-5 md:py-6 border-2 rounded-full" onClick={handleScrollToWhatsInside}>
                                 <PlayCircle className="w-4 h-4 md:w-5 md:h-5 mr-2" />
                                 See What's Inside
                             </Button>
@@ -870,7 +877,96 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* 11. Final CTA (Pricing) */}
+            {/* 11. Recap Section */}
+            <section id="whats-inside" className="py-12 md:py-24 px-4 md:px-6 bg-card">
+                <div className="max-w-7xl mx-auto">
+                    <div className="text-center mb-10 md:mb-16">
+                        <Badge variant="secondary" className="mb-3 md:mb-4 text-sm md:text-base px-3 md:px-4 py-1.5 md:py-2 bg-primary/10 text-primary border-none">
+                            <FileText className="w-3 h-3 md:w-4 md:h-4 mr-1.5 md:mr-2 inline" />
+                            Complete Toolkit
+                        </Badge>
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-foreground mb-3 md:mb-4 px-2">
+                            What's Inside – 1000+ Editable Tools for Mindfulness Coaches
+                        </h2>
+                        <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
+                            Everything you need to coach clients, assign homework, and grow your mindfulness business
+                        </p>
+                    </div>
+
+                    <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-start mb-10 md:mb-16">
+                        {/* Image Column */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
+                            className="relative lg:sticky lg:top-24"
+                        >
+                            <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-white">
+                                <img
+                                    src="/assets/mindfulness/What's Inside _converted.webp"
+                                    alt="What's Inside - 1000+ Editable Tools for Mindfulness Coaches"
+                                    className="w-full h-auto aspect-square object-cover transform hover:scale-105 transition-transform duration-700"
+                                    loading="lazy"
+                                />
+                            </div>
+                        </motion.div>
+
+                        {/* Content Column */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
+                        >
+                            <div className="grid sm:grid-cols-2 gap-2 md:gap-3">
+                                {[
+                                    "Mastering the Art of Mindfulness: Finding Peace in the Present Moment",
+                                    "Mindful Awareness Compass",
+                                    "Mindful Awareness Garden",
+                                    "Mindfulness Garden",
+                                    "5-4-3-2-1 Grounding Technique",
+                                    "Anxiety Relief Mindfulness Tools",
+                                    "Emotional Mind Mind Map",
+                                    "Mindfulness Mind Map",
+                                    "Mindfulness Affirmations",
+                                    "Mindfulness Eating",
+                                    "The Power of Mindful Eating",
+                                    "30 Days of Mindful Eating",
+                                    "Mindful Eating Informational Version",
+                                    "Mindful Eating Affirmations",
+                                    "Mindfulness Journal Version",
+                                    "Mindfulness Social Media Posts (Square format)",
+                                    "Mindfulness Social Media Posts (Mobile format)",
+                                    "Client Welcome Packet",
+                                    "Body Scan Meditation",
+                                    "Three Minute Breathing Space",
+                                    "Self Compassion Breathing Space",
+                                    "Self Compassion Meditation",
+                                    "Mindfulness Against Limiting Beliefs (Worksheet version)",
+                                    "Mindfulness Against Limiting Beliefs (Guide version)"
+                                ].map((item, index) => (
+                                    <div key={index} className="flex items-start gap-2 p-2 rounded-md hover:bg-muted/50 transition-colors">
+                                        <div className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center text-primary text-xs font-semibold mt-0.5">
+                                            {index + 1}
+                                        </div>
+                                        <span className="text-xs md:text-sm text-foreground/80 leading-snug">{item}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </motion.div>
+                    </div>
+
+                    <div className="text-center">
+                        <Button size="lg" className="text-lg md:text-xl px-6 md:px-8 py-5 md:py-6 bg-primary hover:bg-primary/90 text-white rounded-full shadow-lg hover:shadow-xl transition-all" onClick={handleCheckoutRedirect}>
+                            <Download className="w-4 h-4 md:w-5 md:h-5 mr-2" />
+                            Get Instant Access
+                        </Button>
+                    </div>
+                </div>
+            </section>
+
+            {/* 12. Final CTA (Pricing) */}
             <section className="py-12 md:py-24 px-4 md:px-6 bg-gradient-to-br from-primary/20 via-background to-secondary/20 relative overflow-hidden">
                 <div className="max-w-4xl mx-auto text-center relative z-10">
                     <h2 className="text-3xl sm:text-4xl md:text-6xl font-serif font-bold mb-4 md:mb-6 px-2">
@@ -924,7 +1020,7 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* 12. FAQ Section */}
+            {/* 13. FAQ Section */}
             <section className="py-12 md:py-24 px-4 md:px-6 bg-card">
                 <div className="max-w-4xl mx-auto">
                     <div className="text-center mb-10 md:mb-16">
@@ -967,7 +1063,7 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* 13. Footer */}
+            {/* 14. Footer */}
             <footer className="py-8 md:py-12 px-4 md:px-6 bg-card border-t">
                 <div className="max-w-7xl mx-auto text-center">
                     <div className="mb-5 md:mb-6">
