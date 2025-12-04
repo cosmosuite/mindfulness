@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://lifecoachingkit.store/sitemap.xml
+Sitemap: https://mindfulnesscoachingkit.pro/sitemap.xml
 
 User-agent: Googlebot
 Allow: /
